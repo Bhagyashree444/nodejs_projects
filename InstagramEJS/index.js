@@ -5,6 +5,11 @@ const path = require("path");
 
 const port = 3000;
 
+//app.use(express.static("public"));
+//app.use(express.static(path.join(__dirname,"public")));
+//app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname,"/public/css")));
+app.use(express.static(path.join(__dirname,"/public/js")));
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
 
@@ -37,6 +42,7 @@ else
     res.render("error.ejs");
 }
 
+// on vscode - terminal as it is nodejs
 //console.log(data);
 
 })
